@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <script>
+            // Simple search/filter for gallery
+            function filterGallery() {
+                const query = document.getElementById('gallerySearch').value.toLowerCase();
+                const items = document.querySelectorAll('.gallery a');
+                items.forEach(item => {
+                    const alt = item.querySelector('img').alt.toLowerCase();
+                    if (alt.includes(query)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </head>
+
+    <body>
+        <nav>
+            <a href="Indexx.html">Home</a> |
+            <a href="About.html">About Us</a> |
+
+        </nav>
+        <hr />
+        <header>
+            <h1>Home Page</h1>
+        </header>
+        <section>
+            <h2>Welcome!</h2>
+            <p>Hello Everyone</p>
+            <p>This is fun</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <a href="boat.html">
+                    <img src="Images/boat.jpg" height="150" alt="A large sailing ship with white sails glides across calm blue water under a clear sky with distant mountains in the background. The scene feels peaceful and adventurous." />
+                </a>
+                <a href="plane.html">
+                    <img src="Images/plane.jpg" height="150" alt="A modern airplane flying high above the clouds with a clear blue sky in the background. The scene feels dynamic and adventurous." />
+                </a>
+                <a href="yatch.html">
+                    <img src="Images/yacht.jpg" height="150" alt="A luxurious white yacht cruising on clear blue water under a sunny sky, evoking a sense of adventure and relaxation." />
+                </a>
+                <a href="truck.html">
+                    <img src="Images/truck.jpg" height="150" alt="A large red truck driving on a highway with a clear blue sky in the background, symbolizing strength and transportation." />
+                </a>
+                <a href="cablecar.html">
+                    <img src="Images/cablecar.jpg" height="150" alt="A red cable car travels high above a lush green valley, with mountains in the distance and a bright blue sky overhead." />
+                </a>
+                <a href="city.html">
+                    <img src="Images/city.jpg" height="150" alt="A bustling cityscape with tall skyscrapers, busy streets, and a vibrant atmosphere, showcasing the energy of urban life." />
+                </a>
+            </div>
+                <a href="http://www.google.com"> Click here to go to Google </a> |
+                <a href="https://www.itvarsity.org"> Click here to go to IT Varsity </a>
+        </section>
+        <footer>
+            <hr />
+            <p>&copy; 2025 FNB APP ACADEMY. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
